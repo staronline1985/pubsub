@@ -4,7 +4,7 @@ import { Meteor } from 'meteor/meteor';
 import './main.html';
 
 
-Template.hello.onCreated(function helloOnCreated() {
+Template.main.onCreated(function helloOnCreated() {
   var self=this;
    self.Items=new ReactiveVar([]);
   Meteor.autorun(function(){
@@ -15,13 +15,13 @@ Template.hello.onCreated(function helloOnCreated() {
 });
 });
 
-Template.hello.helpers({
+Template.main.helpers({
   Items() {
    return Template.instance().Items.get();
   }
 });
 
-Template.hello.events({
+Template.main.events({
   'click #btnAdd'(event, instance) {
     Meteor.call("InserItem",function(error,response){
 
