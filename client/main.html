@@ -3,13 +3,13 @@
 </head>
 
 <body>
-  <h1>Welcome to Meteor!</h1>
-  {{> hello}}
+  {{> main}}
 </body>
 
-<template name="hello">
+<template name="main">
   <ul>
-  <p><button id="btnAdd" >Add </button>  <input type="text" placeholder="Find Here" id="textHere" /> <button id="buttonSerch">Search Here</button></p>
+  <p><button id="btnAdd" >Add </button>  <input type="text" placeholder="Find Here" id="textHere" /> 
+  <button id="buttonSerch">Search Here</button></p>
    {{#with Items}}
    {{#each this}}
     <li><p>Id is : {{this._id}} and stored index {{this.item}} </p></li>
